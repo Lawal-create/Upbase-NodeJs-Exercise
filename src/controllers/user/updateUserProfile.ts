@@ -1,4 +1,4 @@
-import User, { IUser } from "../../model/userModel";
+import User from "../../model/userModel";
 import ApiError from "../../middlewares/errorHandler/ApiError";
 import { successResponse } from "../../utils/responses";
 import { Request, Response, NextFunction } from "express";
@@ -13,15 +13,16 @@ const updateUserProfile = async (
   try {
     Logger.info(formatLog(req, "Update User Profile"));
     const userId = String(req.body.user._id);
-    const { firstName, lastName, email, password } = req.body;
+    const { firstName, lastName, email, password, phoneNumber } = req.body;
     const user = await User.findOne({ _id: userId });
     if (!user) {
       return next(new ApiError(404, "User not found"));
     }
-    user.firstName = firstName ? firstName : user.firstName;
-    user.lastName = lastName ? lastName : user.lastName;
-    user.email = email ? email : user.email;
-    user.password = password ? password : user.password;
+    user.firstName = firstName || user.firstName;
+    user.lastName = lastName || user.lastName;
+    user.email = email || user.email;
+    user.phoneNumber = phoneNumber || user.phoneNumber;
+    user.password = password || user.password;
 
     await user.save();
     Logger.info(formatLog(req, "Updated User Profile"));

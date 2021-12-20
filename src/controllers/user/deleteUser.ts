@@ -1,5 +1,4 @@
 import User from "../../model/userModel";
-import ApiError from "../../middlewares/errorHandler/ApiError";
 import { successResponse } from "../../utils/responses";
 import { Request, Response, NextFunction } from "express";
 import Logger from "../../utils/logger/index";

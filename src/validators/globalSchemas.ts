@@ -42,6 +42,16 @@ export const endTime = date.min(Joi.ref("startTime")).messages({
   "any.only": "End time must be greater than start time"
 });
 
+export const phoneNumber = Joi.string()
+  .pattern(phoneNumberRegex)
+  .min(11)
+  .max(11)
+  .messages({
+    "string.pattern": "Phone number is invalid",
+    "string.min": "Phone number must be exactly 11 digits",
+    "string.max": "Phone number must be exactly 11 digits"
+  });
+
 export const stringRequiredValidator = (name: string): Joi.StringSchema => {
   return Joi.string()
     .required()

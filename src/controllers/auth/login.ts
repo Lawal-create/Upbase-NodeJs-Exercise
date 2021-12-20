@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { AuthResponseData } from "../../types/responses";
 import ApiError from "../../middlewares/errorHandler/ApiError";
-import User, { IUser } from "../../model/userModel";
+import User from "../../model/userModel";
 import { LoginUserRequestData } from "../../types/requests";
 import { checkValidity, createAccessToken } from "../../utils/helpers/auth";
 import logger from "../../utils/logger";

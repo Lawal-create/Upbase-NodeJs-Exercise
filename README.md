@@ -22,7 +22,6 @@ To run the app locally, follow the steps below:
    ```
    cd Upbase-NodeJs-Exercise
 
-
    ```
 
 3. Install the dependencies in the package.json using the command:

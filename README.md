@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-The following contains the steps required to get the application up and running on your local workspace. To check out the available endpoints, visit the [documentation.](https://documenter.getpostman.com/view/15869686/UUxtEqCX)
+The following contains the steps required to get the application up and running on your local workspace. To check out the available endpoints, visit the [documentation.](https://documenter.getpostman.com/view/15869686/UVRBm5tR)
 
 ### Prerequisites
 
